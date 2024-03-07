@@ -1,0 +1,511 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-size: cover;
+    background-image: url(../images/background.png);
+}
+
+.main {
+    overflow: hidden;
+}
+
+nav {
+    position: relative;
+    
+    width: 100%;
+    height: 129px;
+    
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+nav .inner-nav {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 1061px;
+    height: 69px;
+
+    transform: translate(-50%, -50%);
+}
+
+nav .inner-nav .nav-logo {
+    cursor: pointer;
+    float: left;
+
+    width: 157px;
+    height: 69px;
+
+    transition: transform 750ms ease-in-out;
+}
+
+nav .inner-nav .nav-logo:hover {
+    transform: scale(1.25);
+}
+
+nav .inner-nav .nav-logo img {
+    float: left;
+    height: 100%;
+}
+
+nav .inner-nav .nav-logo .text-area {
+    position: relative;
+    float: right;
+
+    top: 50%;
+
+    width: 70px;
+    height: 30px;
+
+    transform: translateY(-50%);
+}
+
+nav .inner-nav .nav-logo .text-area h1 {
+    text-align: center;
+    line-height: 12px;
+
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 14px;
+
+    color: rgb(178, 105, 2);
+}
+
+nav .inner-nav .nav-logo .text-area h2 {
+    text-align: center;
+
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 14px;
+
+    color: white;
+}
+
+nav .inner-nav .placeholder {
+    float: left;
+    width: 203px;
+}
+
+nav .inner-nav .nav-item {
+    position: relative;
+    float: left;
+
+    display: block;
+
+    top: 50%;
+    margin-left: 150px;
+
+    transform: translateY(-50%);
+}
+
+nav .inner-nav .nav-item a {
+    cursor: pointer;
+
+    letter-spacing: -0.5px;
+    
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Poppins';
+
+    color: rgba(255, 255, 255, 0.5);
+    transition: all 400ms ease-in-out;
+}
+
+nav .inner-nav .nav-item:hover a {
+    text-shadow: 0px 0px 25px rgba(178, 105, 2);
+    color: white;
+}
+
+.main .logo {
+    position: relative;
+    opacity: 0.05;
+
+    width: 689px;
+
+    margin-left: 250px;
+    margin-top: -67px;
+
+    filter: blur(4px);
+}
+
+.main .char {
+    position: absolute;
+
+    height: 1030px;
+    
+    left: 0;
+    top: 100px;
+}
+
+.main .interaction-container {
+    position: absolute;
+
+    width: 627px;
+    height: 393px;
+
+    right: 188px;
+    top: 343px;
+}
+
+.main .interaction-container h1 {
+    text-align: center;
+
+    font-size: 140.9px;
+    font-weight: 800;
+
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(56, 31, 2) 48.44%, rgba(56, 31, 2) 100%);
+    
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+}
+
+.main .interaction-container h2 {
+    letter-spacing: -1px;
+
+    margin-top: -120px;
+
+    font-family: 'Poppins';
+    font-weight: 800;
+    font-size: 48px;
+
+    text-align: left;
+    text-shadow: 0px 0px 36px rgba(178, 105, 2);
+    
+    color: rgb(178, 105, 2);
+}
+
+.main .interaction-container p {
+    margin-top: 35px;
+    line-height: 22px;
+
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 17px;
+
+    color: white;
+}
+
+.main .interaction-container .interaction-buttons {
+    position: absolute;
+    bottom: 0;
+}
+
+.main .interaction-container .interaction-buttons button {
+    display: block;
+    float: left;
+    
+    border: none;
+    outline: none;
+    
+    margin-right: 65px;
+    border-radius: 2px;
+    
+    width: 281px;
+    height: 80px;
+    
+    background: linear-gradient(90deg, rgba(178, 105, 2) 0%, rgba(34, 171, 236, 0) 100%);
+    background-size: 100% 100%;
+    
+    color: white;
+}
+
+.main .interaction-container .interaction-buttons button svg {
+    position: relative;
+    margin-right: 10px;
+}
+
+.main .interaction-container .interaction-buttons button a {
+    position: relative;
+    
+    top: -7px;
+
+    font-family: 'Poppins';
+    font-weight: 700;
+    
+    text-transform: uppercase;
+    text-shadow: 0px 0px 17px rgba(255, 255, 255, 0.5);
+}
+
+.main .interaction-container .interaction-buttons button.counter {
+    background: none;
+    
+    border: solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(260deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.025) 100%);
+    border-width: 2px;
+    
+    font-weight: 400;
+    
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.main .interaction-container .interaction-buttons button.counter a {
+    font-weight: 500;
+    text-shadow: none;
+}
+
+.main .interaction-container .interaction-buttons button.clickable {
+    transition: all 400ms ease-in-out;
+    cursor: pointer;
+}
+
+.main .interaction-container .interaction-buttons button.clickable:hover {
+    transform: scale(1.1);
+    background-size: 125% 100%;
+}
+
+.sub .char {
+    position: absolute;
+    
+    right: 0;
+    bottom: -100%;
+}
+
+.sub .rules-container {
+    position: absolute;
+
+    width: 851px;
+    height: 762px;
+
+    left: 88px;
+    bottom: -85%;
+}
+
+.sub .rules-container h1 {
+    font-size: 145px;
+    font-weight: 800;
+        
+    text-align: right;
+    
+    color: transparent;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(34, 171, 236, 0.025) 48.44%, rgba(34, 171, 236, 0) 100%);
+
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.sub .rules-container h2 {
+    letter-spacing: -1px;
+
+    margin-top: -120px;
+
+    font-family: 'Poppins';
+    font-weight: 800;
+    font-size: 48px;
+
+    text-align: right;
+    text-shadow: 0px 0px 36px rgba(178, 105, 2);
+    
+    color: rgb(178, 105, 2);
+}
+
+.sub .rules-container .text-area {
+    position: relative;
+    float: right;
+    
+    width: 90%;
+    height: 509px;
+    
+    overflow-x: hidden;
+    scrollbar-width: unset;
+    
+    padding-right: 5px;
+    
+    top: 50px;
+}
+
+.sub .rules-container .text-area ul {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.sub .rules-container .text-area ul li {
+    margin-left: 50px;
+    line-height: 29px;
+    
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 16px;
+    
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.sub .rules-container .text-area ul li::marker {
+    font-size: 19px;
+    color: white;
+}
+
+.sub .rules-container .text-area p {
+    text-align: center;
+
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 16px;
+    
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.sub .rules-container .text-area h1 {
+    text-align: center;
+
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 18px;
+
+    line-height: 30px;
+
+    text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.25);
+
+    color: white;
+}
+
+.sub .rules-container .text-area::-webkit-scrollbar {
+    display: block;
+	width: 10px;
+}
+
+.sub .rules-container .text-area::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.sub .rules-container .text-area::-webkit-scrollbar-thumb {
+	background-color: rgb(178, 105, 2);
+	border-radius: 25px;
+}
+
+@media screen and (max-width: 1800px) {
+    body {
+        background-size: auto;
+        background-position-x: 26.6%;
+    }
+
+    .main .logo {
+        display: block;
+        margin: 128px auto;
+        
+        width: 100%;
+    }
+
+    .main .char {
+        display: none;
+    }
+
+    .main .interaction-container {
+        position: absolute;
+        
+        left: 50%;
+        top: 55%;
+
+        height: 550px;
+        width: 75%;
+
+        transform: translate(-50%, -50%);
+    }
+    
+    .main .interaction-container h1 {
+        text-align: center;
+        margin-bottom: 70px;
+        font-size: 40px;
+    }
+    
+    .main .interaction-container h2 {
+        text-align: center;
+    }
+    
+    .main .interaction-container .interaction-buttons {
+        position: relative;
+        margin-top: 60px;
+    }
+
+    .main .interaction-container .interaction-buttons button {
+        margin-bottom: 30px;
+    }
+
+    .main .interaction-container p {
+        position: relative;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .sub .char {
+        display: none;
+    }
+
+    .sub .rules-container {
+        left: 50%;
+        bottom: -1150px;
+
+        height: 100%;
+        width: 80%;
+        
+        transform: translateX(-50%);
+    }
+
+    .sub .rules-container h1 {
+        display: none;
+    }
+
+    .sub .rules-container h2 {
+        margin: 0;
+
+        position: relative;
+        text-align: center;
+    }
+
+    .sub .rules-container .text-area {
+        width: 100%;
+        height: 70%;
+    }
+
+    nav .inner-nav {
+        width: 85%;
+    }
+
+    nav .inner-nav .nav-item {
+        display: table-row;
+        float: none;
+        top: 10px;
+        margin: 0;
+    }
+
+    nav .inner-nav .nav-items {
+        position: absolute;
+        right: 0;
+    }
+
+    nav .inner-nav .nav-item a {
+        font-size: 12px;
+    }
+}
+
+nav .marker::before {
+    
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 12px;
+
+    color: rgba(255, 255, 255, 0.015);
+}
